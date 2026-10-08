@@ -1,0 +1,7 @@
+interface:
+  display_name: "通用故事漫画制作"
+  short_description: "把创意、完整故事或脚本忠实改编为可发布漫画"
+  brand_color: "#F25F35"
+  default_prompt: "使用 $ark-story-comic 把这段创意、故事或脚本改编成一套完整漫画，并遵守我指定的改编边界和交付规格。"
+policy:
+  allow_implicit_invocation: true

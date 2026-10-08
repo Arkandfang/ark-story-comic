@@ -1,0 +1,17 @@
+{
+  "name": "ark-story-comic",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portable runtime dependencies for the ark-story-comic Codex Skill",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "smoke": "python3 scripts/smoke_test.py",
+    "test": "python3 -m unittest discover -s tests -v"
+  },
+  "dependencies": {
+    "sharp": "0.35.5"
+  }
+}

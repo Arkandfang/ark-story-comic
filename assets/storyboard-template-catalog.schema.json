@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/ark-story-comic/storyboard-template-catalog.schema.json",
+  "title": "Concrete Comic Storyboard Template Catalog",
+  "type": "object",
+  "required": ["catalogVersion", "templates"],
+  "properties": {
+    "catalogVersion": {"type": "string"},
+    "templates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "templateId",
+          "canvas",
+          "preview",
+          "panels",
+          "readingOrder",
+          "capacities",
+          "constraints"
+        ],
+        "properties": {
+          "templateId": {"type": "string", "minLength": 1},
+          "preview": {"type": "string", "minLength": 1},
+          "canvas": {
+            "type": "object",
+            "required": ["width", "height"],
+            "properties": {
+              "width": {"type": "integer", "minimum": 1},
+              "height": {"type": "integer", "minimum": 1}
+            },
+            "additionalProperties": false
+          },
+          "panels": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["panelId", "readingIndex", "geometry"],
+              "properties": {
+                "panelId": {"type": "string"},
+                "readingIndex": {"type": "integer", "minimum": 1},
+                "geometry": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "required": ["type", "x", "y", "width", "height"],
+                      "properties": {
+                        "type": {"const": "rect"},
+                        "x": {"type": "number"},
+                        "y": {"type": "number"},
+                        "width": {"type": "number", "exclusiveMinimum": 0},
+                        "height": {"type": "number", "exclusiveMinimum": 0}
+                      },
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "required": ["type", "points"],
+                      "properties": {
+                        "type": {"const": "polygon"},
+                        "points": {
+                          "type": "array",
+                          "minItems": 3,
+                          "items": {
+                            "type": "array",
+                            "prefixItems": [{"type": "number"}, {"type": "number"}],
+                            "items": false
+                          }
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  ]
+                },
+                "areaRole": {"enum": ["primary", "secondary", "accent", "transition", "any"]}
+              },
+              "additionalProperties": false
+            }
+          },
+          "readingOrder": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string"}
+          },
+          "capacities": {
+            "type": "object",
+            "required": ["subjects", "dialogueDensity", "actionContinuity"],
+            "properties": {
+              "subjects": {"type": "integer", "minimum": 0},
+              "dialogueDensity": {"enum": ["none", "low", "medium", "high"]},
+              "actionContinuity": {"enum": ["none", "low", "medium", "high"]}
+            },
+            "additionalProperties": true
+          },
+          "tags": {"type": "array", "items": {"type": "string"}},
+          "strengths": {"type": "array", "items": {"type": "string"}},
+          "constraints": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

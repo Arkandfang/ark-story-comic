@@ -1,0 +1,3476 @@
+{
+  "catalogVersion": "2.0.0",
+  "templateKind": "reference-recipe",
+  "templates": [
+    {
+      "templateId": "SB-001",
+      "titleZh": "规则网格",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-001.webp",
+      "previewSize": {
+        "width": 554,
+        "height": 629
+      },
+      "previewSha256": "1bbb75f2c1dad9554014dab572e3175fe3a073d28cc422ef24659ad326d87044",
+      "promptZh": "漫画分镜。排版：规则网格，所有面板大小接近、排列整齐，阅读顺序最稳定，适合日常和对白故事。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Regular Grid, panels of equal size arranged neatly in a consistent reading order, ideal for slice-of-life and dialogue-driven stories. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "dialogue",
+        "everyday",
+        "primary-panel",
+        "stable-order"
+      ],
+      "strengths": [
+        "能清楚组织人物轮流说话和反应",
+        "适合低冲突的日常节拍",
+        "能建立明确的主格和次格层级",
+        "阅读顺序稳定，小尺寸下容易扫读"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "medium",
+          "high"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "low"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-002",
+      "titleZh": "四格起承转合",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-002.webp",
+      "previewSize": {
+        "width": 546,
+        "height": 629
+      },
+      "previewSha256": "dbe28c42b9c7e71aa19e398f78aab174dfcba3242bdaebb9c208da8f34c5826c",
+      "promptZh": "漫画分镜。排版：四格起承转合，四个等格依次承担铺垫、发展、转折和包袱，适合短笑话。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Four-Panel Kishōtenketsu, four equal panels sequentially presenting introduction, development, twist, and punchline, ideal for short comedic stories. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "four-beat",
+        "primary-panel"
+      ],
+      "strengths": [
+        "适合四个连续节拍的短篇结构",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": 4,
+          "min": 4,
+          "max": 4
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-003",
+      "titleZh": "大格 + 小格",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-003.webp",
+      "previewSize": {
+        "width": 554,
+        "height": 690
+      },
+      "previewSha256": "092e36171e93f0ef8bf5b4842e25f76ef62af7d29bfaf1693d069cbc96c43a6d",
+      "promptZh": "漫画分镜。排版：大格 + 小格，一个主画面占据大面积，其余小格补充过程、反应或细节。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Hero Panel + Inset Panels, one prominent large panel occupies primary area, supported by smaller secondary panels for reactions or details. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "primary-panel",
+        "reaction"
+      ],
+      "strengths": [
+        "能建立明确的主格和次格层级",
+        "适合突出表情、眼神或即时反应"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-004",
+      "titleZh": "顶部大格开场",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-004.webp",
+      "previewSize": {
+        "width": 546,
+        "height": 690
+      },
+      "previewSha256": "6965b9baf03f8cd52a2ccb83a465424b81e1a2ee2d358f394729ce5fa8ae7e09",
+      "promptZh": "漫画分镜。排版：顶部大格开场，用横跨页面的大面板建立场景和人物关系，下面再进入连续叙事。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Top Splash Panel Opening, wide banner panel across top establishing scene and characters before subsequent sequential narrative below. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "opening",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能把建立场景或人物的画面放大",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-005",
+      "titleZh": "底部大格收尾",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-005.webp",
+      "previewSize": {
+        "width": 554,
+        "height": 642
+      },
+      "previewSha256": "cc8a48a00d11c35eb443bee70cd6ab747e4c2256a9a1334e712d9a6557e1fa70",
+      "promptZh": "漫画分镜。排版：底部大格收尾，前面用小格推进，最后用大面板完成高潮、反转或情绪落点。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Bottom Climax Panel Ending, smaller panels build narrative momentum leading to a large impactful bottom panel for climax or reveal. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "contrast",
+        "ending",
+        "impact",
+        "primary-panel",
+        "progression"
+      ],
+      "strengths": [
+        "能建立两方、前后或心理对照",
+        "适合把结果或情绪余韵留给页尾",
+        "适合放大一个明确的视觉冲击节拍",
+        "能建立明确的主格和次格层级",
+        "能强化逐级推进的视觉节奏"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "medium",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-006",
+      "titleZh": "中央大格爆发",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-006.webp",
+      "previewSize": {
+        "width": 561,
+        "height": 642
+      },
+      "previewSha256": "bf4ebebcd9ce9d8788586d9bf8a9c9fbaaeafe7030b0b3c15f3a651141de37c0",
+      "promptZh": "漫画分镜。排版：中央大格爆发，页面中心设置最大面板，用于动作高潮或视觉核心。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Center Focal Panel, dominant central panel commanding maximum visual attention for action climax or core reveal. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "action",
+        "impact",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能强化运动方向和速度感",
+        "适合放大一个明确的视觉冲击节拍",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "动作轴线、肢体和道具连续性风险较高"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "medium",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-007",
+      "titleZh": "对角切割",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-007.webp",
+      "previewSize": {
+        "width": 554,
+        "height": 684
+      },
+      "previewSha256": "12056fd4d2f4bf14d063263b120b0c5b6f532061daacefcff16dc4ffb0942a94",
+      "promptZh": "漫画分镜。排版：对角切割，面板沿斜线分割页面，适合速度、冲突、追逐和对峙。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Diagonal Dynamic Split, panels divided along diagonal angles, intensifying speed, conflict, pursuit, and confrontation. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "action",
+        "contrast",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能强化运动方向和速度感",
+        "能建立两方、前后或心理对照",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "动作轴线、肢体和道具连续性风险较高"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "medium",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-008",
+      "titleZh": "Z 字阅读",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-008.webp",
+      "previewSize": {
+        "width": 561,
+        "height": 684
+      },
+      "previewSha256": "ff6ff7f4ece7882f581c3c02c42db65865addce589b079dca59e868d69b46019",
+      "promptZh": "漫画分镜。排版：Z 字阅读，视觉焦点沿左上→右上→左下→右下流动，阅读路径清晰。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Z-Pattern Reading Flow, visual focus flows in a classic Z-path (top-left, top-right, bottom-left, bottom-right) for clear storytelling. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "primary-panel",
+        "route"
+      ],
+      "strengths": [
+        "能建立明确的主格和次格层级",
+        "能让空间路线承担阅读路径"
+      ],
+      "requirements": [
+        "spatial-route"
+      ],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-009",
+      "titleZh": "S 型阅读",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-009.webp",
+      "previewSize": {
+        "width": 552,
+        "height": 659
+      },
+      "previewSha256": "e326738490b8066f26ca68827e32b0fc7ab5c8ed4a2def66c16db80b05ee22df",
+      "promptZh": "漫画分镜。排版：S 型阅读，人物与构图沿柔和曲线移动，适合轻快、浪漫或旅行叙事。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: S-Curve Narrative Flow, characters and compositions follow a soft curving path, suitable for whimsical, romantic, or journey narratives. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "primary-panel"
+      ],
+      "strengths": [
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-010",
+      "titleZh": "螺旋阅读",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-010.webp",
+      "previewSize": {
+        "width": 561,
+        "height": 659
+      },
+      "previewSha256": "8a273ca3d05558cf56f689c11a1a49425be0ee4335e2710569e86cfd27e6136e",
+      "promptZh": "漫画分镜。排版：螺旋阅读，面板和视线围绕中心旋转，逐步逼近核心事件。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Spiral Inward Flow, panels and gaze spiral inwards around center, gradually closing in on core event. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "primary-panel"
+      ],
+      "strengths": [
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-011",
+      "titleZh": "放射型分镜",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-011.webp",
+      "previewSize": {
+        "width": 552,
+        "height": 668
+      },
+      "previewSha256": "c2e2c0d4cd5d5fcce65af69894576b32a6743df593ee42143f803dbe3efb0e02",
+      "promptZh": "漫画分镜。排版：放射型分镜，多个面板向中心聚拢，适合爆发、揭示和强焦点事件。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Radial Converging Panels, multiple panels radiate toward central focus, perfect for explosions, revelations, and high-impact moments. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "impact",
+        "primary-panel"
+      ],
+      "strengths": [
+        "适合放大一个明确的视觉冲击节拍",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "medium",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-012",
+      "titleZh": "碎片面板",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-012.webp",
+      "previewSize": {
+        "width": 561,
+        "height": 668
+      },
+      "previewSha256": "beedba7f576719cfc83ebbe4b5d97f737050cc8a7c3ba80e3d8bbcc33473d954",
+      "promptZh": "漫画分镜。排版：碎片面板，画面像玻璃碎片般分割，适合混乱、战斗、记忆和心理冲击。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Shattered Glass Panels, broken fragmented panels dividing screen like fractured glass, expressing chaos, combat, memories, and psychological shock. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "impact",
+        "primary-panel"
+      ],
+      "strengths": [
+        "适合放大一个明确的视觉冲击节拍",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "medium",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-013",
+      "titleZh": "破框构图",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-013.webp",
+      "previewSize": {
+        "width": 559,
+        "height": 671
+      },
+      "previewSha256": "beb6e39cc85dd755d69f4f0b2fb79b1a4ea10d11bb942415d77da8075937d594",
+      "promptZh": "漫画分镜。排版：破框构图，人物、动作或特效越过面板边界，增强力量、速度和空间突破感。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Border Break, characters, actions, or visual effects break through panel boundaries, amplifying power, speed, and dimensional presence. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "action",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能强化运动方向和速度感",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "动作轴线、肢体和道具连续性风险较高"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "medium",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-014",
+      "titleZh": "跨格人物",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-014.webp",
+      "previewSize": {
+        "width": 553,
+        "height": 671
+      },
+      "previewSha256": "5931eab922d3309ee62ea3b7c51a903310c36b4051a55ab62c72ab9a18dcfca0",
+      "promptZh": "漫画分镜。排版：跨格人物，同一人物身体横跨多个面板，使连续动作更流畅。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Multi-Panel Spanning Character, single character figure extends across multiple panels, creating continuous fluid action. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "action",
+        "action-sequence",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能强化运动方向和速度感",
+        "能把连续动作拆成可读阶段",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "动作轴线、肢体和道具连续性风险较高",
+        "阶段过多时容易把单页挤得过密"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "high",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-015",
+      "titleZh": "跨格背景",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-015.webp",
+      "previewSize": {
+        "width": 559,
+        "height": 632
+      },
+      "previewSha256": "9227770fa48e8a574fb1d502996848525ba46e7817c822c46cbc1b695e9af6c7",
+      "promptZh": "漫画分镜。排版：跨格背景，多个面板共享同一背景，人物在不同格中代表不同时间点。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Continuous Background Across Panels, multiple panels share unified continuous panoramic background, with characters shown at different moments. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "primary-panel"
+      ],
+      "strengths": [
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-016",
+      "titleZh": "一镜到底",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-016.webp",
+      "previewSize": {
+        "width": 553,
+        "height": 632
+      },
+      "previewSha256": "adc03796acee0ad4bb620c57bf9b5c3edde59b5cb0ea9dd338c0649347b5435f",
+      "promptZh": "漫画分镜。排版：一镜到底，整页实际上是同一完整空间，人物在画面不同位置连续出现。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Single Continuous Take, entire page represents single unbroken environment, with characters appearing at multiple positions sequentially. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "primary-panel"
+      ],
+      "strengths": [
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-017",
+      "titleZh": "电影胶片式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-017.webp",
+      "previewSize": {
+        "width": 556,
+        "height": 654
+      },
+      "previewSha256": "f27b25299eb15118d3fcd9d5f59c4c87c5add072bc6eb2bd312b045b215fb899",
+      "promptZh": "漫画分镜。排版：电影胶片式，面板像胶片帧连续排列，强调时间推进和电影感。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Cinematic Filmstrip, sequential filmstrip-like horizontal panels, emphasizing linear time progression and cinematic pacing. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "primary-panel",
+        "progression"
+      ],
+      "strengths": [
+        "能建立明确的主格和次格层级",
+        "能强化逐级推进的视觉节奏"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-018",
+      "titleZh": "宽银幕横格",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-018.webp",
+      "previewSize": {
+        "width": 557,
+        "height": 654
+      },
+      "previewSha256": "3dc4302ccb7cc4949b1d407d53c0680d211eae407a5e8a3829f6193b4277e911",
+      "promptZh": "漫画分镜。排版：宽银幕横格，大量使用横向宽格，适合动作、风景和电影式场面。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Widescreen Horizontal Panels, wide horizontal panels dominating page, ideal for cinematic landscapes, vehicle chases, and expansive scenes. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "action",
+        "horizontal-flow",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能强化运动方向和速度感",
+        "适合横向连续空间或宽景",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "动作轴线、肢体和道具连续性风险较高"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "medium",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-019",
+      "titleZh": "竖向长格",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-019.webp",
+      "previewSize": {
+        "width": 556,
+        "height": 662
+      },
+      "previewSha256": "7313f1db58748567dd7a70ba6ba635c76c7f8b68db2a45e6d50185331e7eeadd",
+      "promptZh": "漫画分镜。排版：竖向长格，使用细长垂直面板，强调坠落、高楼、人物全身或纵向运动。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Vertical Skyscraper Panels, elongated vertical panels emphasizing falling, high-rise buildings, full-body figures, or upward motion. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "action",
+        "primary-panel",
+        "vertical-flow"
+      ],
+      "strengths": [
+        "能强化运动方向和速度感",
+        "能建立明确的主格和次格层级",
+        "适合向上／向下的空间运动"
+      ],
+      "requirements": [],
+      "risks": [
+        "动作轴线、肢体和道具连续性风险较高"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "medium",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-020",
+      "titleZh": "超窄反应格",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-020.webp",
+      "previewSize": {
+        "width": 557,
+        "height": 662
+      },
+      "previewSha256": "54741828d230b01bfd20c303164542c362be921db4f99e2ac628ae6c4a6e6da7",
+      "promptZh": "漫画分镜。排版：超窄反应格，用极窄小格快速插入眼睛、嘴、手或表情反应，提升节奏。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Ultra-Slim Reaction Insets, narrow slit-like panels inserted rapidly for eyes, mouth, hands, or micro-reactions, boosting pacing. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "primary-panel",
+        "reaction"
+      ],
+      "strengths": [
+        "能建立明确的主格和次格层级",
+        "适合突出表情、眼神或即时反应"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-021",
+      "titleZh": "眼睛特写链",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-021.webp",
+      "previewSize": {
+        "width": 552,
+        "height": 631
+      },
+      "previewSha256": "77076f2927f3fb83c6d071fcc5fd97044ce5b892ddf571ea5a1844d0bdabdff7",
+      "promptZh": "漫画分镜。排版：眼睛特写链，连续多个眼神特写形成对峙、犹豫或情绪升级。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Eye Close-Up Sequence, successive eye close-ups building confrontation, suspense, hesitation, or escalating tension. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "close-up",
+        "contrast",
+        "primary-panel",
+        "progression",
+        "reaction"
+      ],
+      "strengths": [
+        "能把关键细节或情绪逐步放大",
+        "能建立两方、前后或心理对照",
+        "能建立明确的主格和次格层级",
+        "能强化逐级推进的视觉节奏",
+        "适合突出表情、眼神或即时反应"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-022",
+      "titleZh": "手部动作链",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-022.webp",
+      "previewSize": {
+        "width": 559,
+        "height": 631
+      },
+      "previewSha256": "f627aa380cec5d585a87ccf925b4b8058547f692dc31d4c4afd0cfff6851aa5f",
+      "promptZh": "漫画分镜。排版：手部动作链，连续用手、按钮、物品等局部特写推进关键动作。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Hand Action Sequence, consecutive close-ups of hands, buttons, props, or tools driving key tactical actions forward. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "action",
+        "action-sequence",
+        "close-up",
+        "primary-panel",
+        "progression"
+      ],
+      "strengths": [
+        "能强化运动方向和速度感",
+        "能把连续动作拆成可读阶段",
+        "能把关键细节或情绪逐步放大",
+        "能建立明确的主格和次格层级",
+        "能强化逐级推进的视觉节奏"
+      ],
+      "requirements": [],
+      "risks": [
+        "动作轴线、肢体和道具连续性风险较高",
+        "阶段过多时容易把单页挤得过密"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "high",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-023",
+      "titleZh": "由远到近",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-023.webp",
+      "previewSize": {
+        "width": 552,
+        "height": 684
+      },
+      "previewSha256": "a80ae5494d89d5bd2f16d812b2b4c8638f73bbfcb8f301fa39d51e81daae76a9",
+      "promptZh": "漫画分镜。排版：由远到近，远景→中景→近景→特写逐步逼近，让情绪和紧张感累积。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Long Shot to Extreme Close-Up, camera zooms from extreme wide shot to close-up, steadily accumulating emotional tension. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "close-up",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能把关键细节或情绪逐步放大",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-024",
+      "titleZh": "由近到远",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-024.webp",
+      "previewSize": {
+        "width": 559,
+        "height": 684
+      },
+      "previewSha256": "dcdc4aaa6d4d37d639faec5efdfe6ac48680ce1f73da74936cd673c42d316889",
+      "promptZh": "漫画分镜。排版：由近到远，从极近特写逐渐拉远，用于揭晓环境真相或制造反差。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Extreme Close-Up to Wide Reveal, camera pulls back from extreme macro detail to wide environmental reveal, creating contrast. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "close-up",
+        "primary-panel",
+        "pull-back"
+      ],
+      "strengths": [
+        "能把关键细节或情绪逐步放大",
+        "能建立明确的主格和次格层级",
+        "能从局部关系拉到环境全貌"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-025",
+      "titleZh": "正反打",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-025.webp",
+      "previewSize": {
+        "width": 557,
+        "height": 664
+      },
+      "previewSha256": "bb86c8f8f1778d15e495fe88254ac28773a99652b746a113851eed99962c225e",
+      "promptZh": "漫画分镜。排版：正反打，两个角色交替面对镜头出现，适合对话、争执和心理博弈。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Shot-Reverse-Shot, alternating character close-ups facing camera, perfect for dialogue, verbal sparring, and psychological duel. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "dialogue",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能清楚组织人物轮流说话和反应",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "medium",
+          "high"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-026",
+      "titleZh": "三连特写",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-026.webp",
+      "previewSize": {
+        "width": 552,
+        "height": 664
+      },
+      "previewSha256": "5155c695ceead71f65111644147cf02417bd3f48eddd72215a51eeb0888d2619",
+      "promptZh": "漫画分镜。排版：三连特写，连续三个关键细节快速切换，例如眼睛→手指→按钮。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Triple Rapid Close-Ups, three consecutive rapid detail shots switching dynamically (e.g. eyes, finger, trigger). Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "close-up",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能把关键细节或情绪逐步放大",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": 3,
+          "min": 3,
+          "max": 3
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-027",
+      "titleZh": "动作分解",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-027.webp",
+      "previewSize": {
+        "width": 557,
+        "height": 640
+      },
+      "previewSha256": "efd857e9760a8d2edf96a630789957d1d16da98f3877b8d03c609d7887a5111e",
+      "promptZh": "漫画分镜。排版：动作分解，把一个动作拆成起势、过程、接触、结果几个面板。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Action Breakdown, single dynamic action dissected into preparation, motion, contact, and aftermath across sequential panels. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "action",
+        "action-sequence",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能强化运动方向和速度感",
+        "能把连续动作拆成可读阶段",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "动作轴线、肢体和道具连续性风险较高",
+        "阶段过多时容易把单页挤得过密"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "high",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-028",
+      "titleZh": "连续动作残影",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-028.webp",
+      "previewSize": {
+        "width": 552,
+        "height": 640
+      },
+      "previewSha256": "058cedcae15cfbde02514026671a5e8e3b2e10958fdc2470216d606c3b639a57",
+      "promptZh": "漫画分镜。排版：连续动作残影，同一人物在单个或多个格子中重复出现，表现高速运动轨迹。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Motion Trail Strobe Sequence, character repeated multiple times within panels depicting high-speed kinetic motion. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "action",
+        "action-sequence",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能强化运动方向和速度感",
+        "能把连续动作拆成可读阶段",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "动作轴线、肢体和道具连续性风险较高",
+        "阶段过多时容易把单页挤得过密"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "high",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-029",
+      "titleZh": "静止重复",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-029.webp",
+      "previewSize": {
+        "width": 559,
+        "height": 643
+      },
+      "previewSha256": "3b17da4337e59c436daf2580b0bb5fea91c5ec1fb6c049e09fd956a7e969b449",
+      "promptZh": "漫画分镜。排版：静止重复，连续几格几乎不变，只改变极小细节，适合尴尬、冷笑话和停顿。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Static Panel Repetition, successive panels nearly identical with minimal shift, creating deadpan comedy, awkward pause, and comedic timing. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "pause",
+        "primary-panel",
+        "quiet"
+      ],
+      "strengths": [
+        "能制造节奏停顿和观察时间",
+        "能建立明确的主格和次格层级",
+        "适合克制、安静或诗意页面"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-030",
+      "titleZh": "节奏骤停",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-030.webp",
+      "previewSize": {
+        "width": 557,
+        "height": 643
+      },
+      "previewSha256": "e5fbe2e8ac4bc3c1dbd08f1058c5bf2675752ecb7853a0b17969a22e269e00af",
+      "promptZh": "漫画分镜。排版：节奏骤停，前面高速密集，突然切到大片留白或静态大格，制造反高潮。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Sudden Pacing Halt, rapid dense action suddenly interrupted by large empty negative space or quiet static frame for comedic anti-climax. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "action",
+        "impact",
+        "negative-space",
+        "pause",
+        "primary-panel",
+        "quiet"
+      ],
+      "strengths": [
+        "能强化运动方向和速度感",
+        "适合放大一个明确的视觉冲击节拍",
+        "能用留白隔离人物、对白或情绪",
+        "能制造节奏停顿和观察时间",
+        "能建立明确的主格和次格层级",
+        "适合克制、安静或诗意页面"
+      ],
+      "requirements": [
+        "preceding-fast-pace"
+      ],
+      "risks": [
+        "动作轴线、肢体和道具连续性风险较高",
+        "留白若没有叙事理由会显得内容不足"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "medium",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-031",
+      "titleZh": "爆发后留白",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-031.webp",
+      "previewSize": {
+        "width": 559,
+        "height": 682
+      },
+      "previewSha256": "15472d9bed0ba9c5cd56c6398ad728a6b197b39a58760bb4dd12d875a9137f18",
+      "promptZh": "漫画分镜。排版：爆发后留白，强烈动作之后用空白和小人物收尾，放大荒诞或情绪余韵。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Post-Climax Negative Space, intense explosive action followed by generous white space and tiny silhouette, emphasizing absurdity or lingering mood. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "action",
+        "ending",
+        "impact",
+        "negative-space",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能强化运动方向和速度感",
+        "适合把结果或情绪余韵留给页尾",
+        "适合放大一个明确的视觉冲击节拍",
+        "能用留白隔离人物、对白或情绪",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [
+        "preceding-intensity"
+      ],
+      "risks": [
+        "动作轴线、肢体和道具连续性风险较高",
+        "留白若没有叙事理由会显得内容不足"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "medium",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-032",
+      "titleZh": "上下镜像",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-032.webp",
+      "previewSize": {
+        "width": 557,
+        "height": 682
+      },
+      "previewSha256": "c4f43c45497411d4c9c010f4197a4add682af591541ecb5087a7fd9561a76cb9",
+      "promptZh": "漫画分镜。排版：上下镜像，上下两部分构图相似但内容反转，用于前后对比。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Vertical Mirroring, top and bottom halves feature symmetrical compositions with contrasted or inverted content for before-after comparison. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "contrast",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能建立两方、前后或心理对照",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-033",
+      "titleZh": "左右对峙",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-033.webp",
+      "previewSize": {
+        "width": 546,
+        "height": 660
+      },
+      "previewSha256": "18ea2ae078e2451f8c85fa067c4a0849d34365a37b04a6412c784b9881bf0653",
+      "promptZh": "漫画分镜。排版：左右对峙，左右两方人物或势力分别占据页面两侧，中间形成视觉冲突。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Split-Side Confrontation, opposing characters or factions occupy left and right sides of page, creating direct visual tension. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "contrast",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能建立两方、前后或心理对照",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-034",
+      "titleZh": "双线并行",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-034.webp",
+      "previewSize": {
+        "width": 555,
+        "height": 660
+      },
+      "previewSha256": "034a712c56cba01a71140921ad97ba4196d7b8905228f5df85f0b9f85a1a6813",
+      "promptZh": "漫画分镜。排版：双线并行，页面同时推进两组人物或两个地点，最终在同一点汇合。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Dual Parallel Storylines, two simultaneous story tracks or locations progressing down page, converging at single point. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "parallel",
+        "primary-panel",
+        "progression"
+      ],
+      "strengths": [
+        "能在同一页推进两条信息线",
+        "能建立明确的主格和次格层级",
+        "能强化逐级推进的视觉节奏"
+      ],
+      "requirements": [
+        "two-concurrent-lines"
+      ],
+      "risks": [
+        "双线切换不清会造成时间与地点混淆"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-035",
+      "titleZh": "交叉剪辑",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-035.webp",
+      "previewSize": {
+        "width": 546,
+        "height": 670
+      },
+      "previewSha256": "c6256bd9160ebe9951477d8a1c6f190f1d3aefa11969725036b3991f02960a7e",
+      "promptZh": "漫画分镜。排版：交叉剪辑，A事件与B事件交替出现，通过快速切换制造紧张或误会。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Cross-Cutting Parallel Action, rapid alternating sequence between events A and B, amplifying suspense or misunderstanding. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "parallel",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能在同一页推进两条信息线",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [
+        "two-concurrent-lines"
+      ],
+      "risks": [
+        "双线切换不清会造成时间与地点混淆"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-036",
+      "titleZh": "闪回嵌套",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-036.webp",
+      "previewSize": {
+        "width": 555,
+        "height": 670
+      },
+      "previewSha256": "8df1ea985798f85fb7ae0ef93f2916bcd2a84a9d723284255f49b9cd7a329299",
+      "promptZh": "漫画分镜。排版：闪回嵌套，主面板内嵌小格表现记忆、回忆或过去片段。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Inset Memory Flashback, main panels embedded with smaller vintage or bordered insets representing memories or past events. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "memory",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能在当前叙事中嵌入过去片段",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [
+        "past-present-distinction"
+      ],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-037",
+      "titleZh": "想象嵌套",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-037.webp",
+      "previewSize": {
+        "width": 545,
+        "height": 662
+      },
+      "previewSha256": "7a3faae5c1d049639fa05cccef8cecca0cce7b5fe6fbf6e7fd34fdecd78757db",
+      "promptZh": "漫画分镜。排版：想象嵌套，现实画面中插入角色脑内幻想格，适合喜剧和主观叙事。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Inset Fantasy Bubble, reality scenes overlaid with dream-bubble panels depicting character's internal imagination or comic thoughts. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "imagination",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能区分现实与主观想象",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [
+        "reality-imagination-distinction"
+      ],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-038",
+      "titleZh": "监控屏幕式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-038.webp",
+      "previewSize": {
+        "width": 550,
+        "height": 662
+      },
+      "previewSha256": "c90eb79adf4ca75082c3906e1da76958fe7787d3162e850b8389d8e787928cec",
+      "promptZh": "漫画分镜。排版：监控屏幕式，页面由多个监控视角组成，适合悬疑、职场和观察型叙事。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Multi-CCTV Security Grid, page structured like multi-channel surveillance monitor feeds, ideal for investigation and thriller narrative. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "primary-panel",
+        "screen"
+      ],
+      "strengths": [
+        "能建立明确的主格和次格层级",
+        "能把屏幕媒介纳入页面结构"
+      ],
+      "requirements": [
+        "screen-or-device"
+      ],
+      "risks": [
+        "屏幕内容和实体对白容易争夺阅读顺序"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-039",
+      "titleZh": "手机聊天式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-039.webp",
+      "previewSize": {
+        "width": 545,
+        "height": 659
+      },
+      "previewSha256": "28ffad45a1f66a99f0d073fdd7e9bf4a9f0ea385db6510b961ef4bc8ea596467",
+      "promptZh": "漫画分镜。排版：手机聊天式，现实场景与手机聊天界面交替或叠加，适合现代社交故事。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Smartphone Chat Overlay, real-life scene blended with phone messaging screens and speech bubbles for modern social media narrative. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "dialogue",
+        "primary-panel",
+        "screen"
+      ],
+      "strengths": [
+        "能清楚组织人物轮流说话和反应",
+        "能建立明确的主格和次格层级",
+        "能把屏幕媒介纳入页面结构"
+      ],
+      "requirements": [
+        "screen-mediated-dialogue",
+        "screen-or-device"
+      ],
+      "risks": [
+        "屏幕内容和实体对白容易争夺阅读顺序"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "medium",
+          "high"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-040",
+      "titleZh": "档案拼贴式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-040.webp",
+      "previewSize": {
+        "width": 550,
+        "height": 659
+      },
+      "previewSha256": "ab583ae0861be5e40e091e0f3ee44c597e1328e8ec6baa69f126882cb0b5e3fc",
+      "promptZh": "漫画分镜。排版：档案拼贴式，照片、便签、文件、地图、漫画格混排，适合调查和设定展示。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Detective Case File Collage, mix of photos, sticky notes, confidential memos, evidence pins, and comic panels for investigative stories. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "investigation",
+        "primary-panel"
+      ],
+      "strengths": [
+        "适合并置线索、档案和视觉证据",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [
+        "multiple-visual-clues"
+      ],
+      "risks": [
+        "线索过多会在小尺寸下变成信息噪音"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-041",
+      "titleZh": "杂志编辑式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-041.webp",
+      "previewSize": {
+        "width": 545,
+        "height": 675
+      },
+      "previewSha256": "ee4b495cb706d8a74746fe0ef225f9c628b4e852fd07bc9e23bbf2b17d7e74e8",
+      "promptZh": "漫画分镜。排版：杂志编辑式，大标题、人物、说明文字和漫画格共同参与页面构成。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Editorial Magazine Layout, bold headlines, character cutouts, captions, and narrative panels composed like high-end editorial spread. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "cover",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能兼顾标题感与叙事主视觉",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "主视觉和标题占比过大时连续节拍容量有限"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-042",
+      "titleZh": "信息图漫画",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-042.webp",
+      "previewSize": {
+        "width": 555,
+        "height": 675
+      },
+      "previewSha256": "f25ce6e220a2427c646afeca16e1376ef65c507bd9ab0d1e83f0cc60e8617a77",
+      "promptZh": "漫画分镜。排版：信息图漫画，漫画分镜与图表、箭头、数据标签结合，适合知识或说明型故事。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Infographic Comic Hybrid, comic storytelling integrated with statistical charts, flow arrows, and data annotations for educational narrative. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "knowledge",
+        "primary-panel"
+      ],
+      "strengths": [
+        "适合说明、知识或结构化信息页面",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "容易偏成信息图而失去漫画叙事感"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-043",
+      "titleZh": "地图路线式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-043.webp",
+      "previewSize": {
+        "width": 545,
+        "height": 651
+      },
+      "previewSha256": "e536c49bd8077f623e446db4d1d39c300324fa001a9dced21aed96f01e7c5af4",
+      "promptZh": "漫画分镜。排版：地图路线式，角色沿地图、道路或空间路径移动，读者顺着路线完成阅读。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Map & Trail Journey, characters navigate along route map or spatial path, guiding reader's eye through the journey. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "investigation",
+        "primary-panel",
+        "route"
+      ],
+      "strengths": [
+        "适合并置线索、档案和视觉证据",
+        "能建立明确的主格和次格层级",
+        "能让空间路线承担阅读路径"
+      ],
+      "requirements": [
+        "multiple-visual-clues",
+        "spatial-route"
+      ],
+      "risks": [
+        "线索过多会在小尺寸下变成信息噪音"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-044",
+      "titleZh": "时间轴式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-044.webp",
+      "previewSize": {
+        "width": 555,
+        "height": 651
+      },
+      "previewSha256": "eb84287f3252086093b4650f282a36661f3eb289628ed3ef15263db1aa69b303",
+      "promptZh": "漫画分镜。排版：时间轴式，按照早→中→晚或过去→现在→未来沿页面顺序推进。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Chronological Timeline Progression, panels sequenced sequentially along time axis (morning to night or past to future). Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "memory",
+        "primary-panel",
+        "progression",
+        "timeline"
+      ],
+      "strengths": [
+        "能在当前叙事中嵌入过去片段",
+        "能建立明确的主格和次格层级",
+        "能强化逐级推进的视觉节奏",
+        "能清楚表达时间推进"
+      ],
+      "requirements": [
+        "past-present-distinction",
+        "time-progression"
+      ],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-045",
+      "titleZh": "时钟式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-045.webp",
+      "previewSize": {
+        "width": 543,
+        "height": 627
+      },
+      "previewSha256": "4c11b82b72e570c43802ab3ecbb06e7f2df55a5190f56064df99794a917f65ec",
+      "promptZh": "漫画分镜。排版：时钟式，面板围绕钟表、圆盘或时间刻度组织，适合一天或倒计时主题。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Clock Face Radial Layout, panels organized around circular clock face or timeline dial, ideal for 24-hour cycle or countdown motif. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "countdown",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能把时间压力可视化",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [
+        "explicit-time-pressure"
+      ],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-046",
+      "titleZh": "中心物件式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-046.webp",
+      "previewSize": {
+        "width": 556,
+        "height": 627
+      },
+      "previewSha256": "5fc5f434f5aa22d90e5ae3c943b33fabfeb6b23b60726e2ad04612a73079ee6b",
+      "promptZh": "漫画分镜。排版：中心物件式，咖啡机、手机、门、车辆等核心物件固定在中央，故事围绕它发生。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Central Anchor Prop, core object (coffee cup, phone, doorway, car) anchored in center with story unfolding around it. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "object-centered",
+        "primary-panel",
+        "screen"
+      ],
+      "strengths": [
+        "适合围绕一个核心物件组织事件",
+        "能建立明确的主格和次格层级",
+        "能把屏幕媒介纳入页面结构"
+      ],
+      "requirements": [
+        "central-object",
+        "screen-or-device"
+      ],
+      "risks": [
+        "屏幕内容和实体对白容易争夺阅读顺序"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-047",
+      "titleZh": "中心人物式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-047.webp",
+      "previewSize": {
+        "width": 543,
+        "height": 689
+      },
+      "previewSha256": "8492d6f5ce300390dca1c94e599265e8e0576d0a0f80718b08ea0de05ba70eba",
+      "promptZh": "漫画分镜。排版：中心人物式，主角固定在页面视觉中心，其他事件和人物围绕其展开。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Central Anchor Protagonist, main protagonist anchored in center of page while surrounding panels rotate around their perspective. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "character-centered",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能保持人物作为绝对视觉中心",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-048",
+      "titleZh": "环形阅读",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-048.webp",
+      "previewSize": {
+        "width": 556,
+        "height": 689
+      },
+      "previewSha256": "f3e129f4aab7de75ef0e0810f00c257b04ce6fb02accf0996732ea061464d460",
+      "promptZh": "漫画分镜。排版：环形阅读，面板首尾相接形成环形，适合循环故事或宿命结构。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Circular Loop Narrative, panels connect head-to-tail in closed loop, conveying recurring cycle, time loop, or karmic fate. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "loop",
+        "primary-panel"
+      ],
+      "strengths": [
+        "适合循环或首尾呼应结构",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [
+        "cyclical-structure"
+      ],
+      "risks": [
+        "首尾关系不明确时阅读入口可能含糊"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "high"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-049",
+      "titleZh": "上下坠落式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-049.webp",
+      "previewSize": {
+        "width": 546,
+        "height": 625
+      },
+      "previewSha256": "f875b43f4df2c7098f130ce560118494dd26ba0e0922d7b67d65ec2b0ca45a0e",
+      "promptZh": "漫画分镜。排版：上下坠落式，阅读路径持续向下，强调坠落、追逐、楼层变化或失控感。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Downward Plunge Flow, composition and reading path plunge downwards continuously, emphasizing falling, vertigo, and freefall chase. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "action",
+        "primary-panel",
+        "route",
+        "vertical-flow"
+      ],
+      "strengths": [
+        "能强化运动方向和速度感",
+        "能建立明确的主格和次格层级",
+        "能让空间路线承担阅读路径",
+        "适合向上／向下的空间运动"
+      ],
+      "requirements": [
+        "spatial-route"
+      ],
+      "risks": [
+        "动作轴线、肢体和道具连续性风险较高"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "medium",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-050",
+      "titleZh": "阶梯式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-050.webp",
+      "previewSize": {
+        "width": 556,
+        "height": 625
+      },
+      "previewSha256": "86583bbe855f558a43adc7875fdcfb29351ab321748420d10a3a4af8fcae96aa",
+      "promptZh": "漫画分镜。排版：阶梯式，面板像楼梯一样逐级排列，视觉上强化推进和升级。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Stepped Staircase Progression, panels stepped diagonally like stairs, visually reinforcing uphill struggle, ascending journey, or level progression. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "primary-panel",
+        "progression"
+      ],
+      "strengths": [
+        "能建立明确的主格和次格层级",
+        "能强化逐级推进的视觉节奏"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-051",
+      "titleZh": "波浪式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-051.webp",
+      "previewSize": {
+        "width": 546,
+        "height": 700
+      },
+      "previewSha256": "263b2934dd4fddd5b79f9ed9a8d1dcb510d5294a5a46e02dcb9b0b4b167d1cd4",
+      "promptZh": "漫画分镜。排版：波浪式，面板边界和阅读路径呈波浪起伏，适合音乐、梦境和轻松故事。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Undulating Wave Flow, wavy panel contours and flowing rhythm, ideal for musical scenes, dreamy states, and lighthearted moods. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "everyday",
+        "imagination",
+        "primary-panel",
+        "route"
+      ],
+      "strengths": [
+        "适合低冲突的日常节拍",
+        "能区分现实与主观想象",
+        "能建立明确的主格和次格层级",
+        "能让空间路线承担阅读路径"
+      ],
+      "requirements": [
+        "reality-imagination-distinction",
+        "spatial-route"
+      ],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-052",
+      "titleZh": "自由漂浮式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-052.webp",
+      "previewSize": {
+        "width": 556,
+        "height": 700
+      },
+      "previewSha256": "5a576dde2c021b803ee2013673b0e868a6c153598b4d625620744fd170c72051",
+      "promptZh": "漫画分镜。排版：自由漂浮式，面板不规则悬浮在页面上，通过人物视线和文字引导阅读。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Free-Floating Unframed Panels, irregularly positioned panels floating freely across white space, guided by eyelines and speech balloons. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "freeform",
+        "primary-panel"
+      ],
+      "strengths": [
+        "适合主观、梦境或实验性叙事",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "非规则路径容易造成阅读顺序歧义"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "high"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-053",
+      "titleZh": "无边框分镜",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-053.webp",
+      "previewSize": {
+        "width": 556,
+        "height": 681
+      },
+      "previewSha256": "d0d59937ee4cbd9cf2edc4d6264794471bde482eafb4310b908c4ca4c39000b7",
+      "promptZh": "漫画分镜。排版：无边框分镜，取消传统面板边框，让人物、背景和留白直接构成阅读区域。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Frameless Organic Narrative, conventional panel borders removed entirely; characters, backgrounds, and negative space form organic reading zones. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "freeform",
+        "negative-space",
+        "primary-panel"
+      ],
+      "strengths": [
+        "适合主观、梦境或实验性叙事",
+        "能用留白隔离人物、对白或情绪",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "非规则路径容易造成阅读顺序歧义",
+        "留白若没有叙事理由会显得内容不足"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "high"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-054",
+      "titleZh": "白场分镜",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-054.webp",
+      "previewSize": {
+        "width": 544,
+        "height": 681
+      },
+      "previewSha256": "cae51ea7980b539508a63647d0f2762663167bf013cde627713164dc4f8f26a9",
+      "promptZh": "漫画分镜。排版：白场分镜，大量空白分隔人物和对白，强调安静、尴尬、诗意或高级感。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Generous Negative Space, abundant white space isolating minimal characters and sparse dialogue, conveying quiet, poetic, or awkward atmosphere. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "dialogue",
+        "negative-space",
+        "primary-panel",
+        "quiet"
+      ],
+      "strengths": [
+        "能清楚组织人物轮流说话和反应",
+        "能用留白隔离人物、对白或情绪",
+        "能建立明确的主格和次格层级",
+        "适合克制、安静或诗意页面"
+      ],
+      "requirements": [
+        "sparse-beats"
+      ],
+      "risks": [
+        "留白若没有叙事理由会显得内容不足"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-055",
+      "titleZh": "满版冲击格",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-055.webp",
+      "previewSize": {
+        "width": 556,
+        "height": 643
+      },
+      "previewSha256": "e329400d265bbbaab5ade0c6d923350aab432798367b7984d7b952a49329e445",
+      "promptZh": "漫画分镜。排版：满版冲击格，单个画面直接铺满整页或几乎整页，用于高潮或视觉记忆点。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Full-Bleed Splash Page, single monumental scene filling entire page with zero margin, delivering peak climax and iconic visual impact. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "impact",
+        "primary-panel"
+      ],
+      "strengths": [
+        "适合放大一个明确的视觉冲击节拍",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "medium",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-056",
+      "titleZh": "跨页式单页模拟",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-056.webp",
+      "previewSize": {
+        "width": 544,
+        "height": 643
+      },
+      "previewSha256": "a503e0fba72d69e92c1836f4606f0c57b9687071e4a51719b87c513e96d6deb2",
+      "promptZh": "漫画分镜。排版：跨页式单页模拟，用中央缝或对称布局模拟双页展开效果，制造大场面感。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Simulated Double-Page Spread, simulated center gutter dividing page symmetrically, creating epic cinematic widescreen feel on single page. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "impact",
+        "primary-panel"
+      ],
+      "strengths": [
+        "适合放大一个明确的视觉冲击节拍",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "medium",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-057",
+      "titleZh": "海报式漫画",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-057.webp",
+      "previewSize": {
+        "width": 545,
+        "height": 635
+      },
+      "previewSha256": "c0eefd0dfe52daba85527ff9773bb050e3158cff5960287a9743246993c58e03",
+      "promptZh": "漫画分镜。排版：海报式漫画，以一个强主视觉为核心，周围嵌入若干小格补足故事。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Poster-Style Narrative, strong dominant poster-like hero visual surrounded by small supporting narrative panels. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "cover",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能兼顾标题感与叙事主视觉",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "主视觉和标题占比过大时连续节拍容量有限"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-058",
+      "titleZh": "封面式叙事页",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-058.webp",
+      "previewSize": {
+        "width": 555,
+        "height": 635
+      },
+      "previewSha256": "7aec2f63dd05f2b860aea5866b4091c3b6fe4f0bfb2a468989cc1fb360bede75",
+      "promptZh": "漫画分镜。排版：封面式叙事页，像杂志封面一样先建立标题和主角，再用多个小格讲完整情节。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Magazine Cover Narrative, stylized magazine cover masthead and cover star surrounded by episodic panels telling complete story. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "cover",
+        "opening",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能兼顾标题感与叙事主视觉",
+        "能把建立场景或人物的画面放大",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "主视觉和标题占比过大时连续节拍容量有限"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-059",
+      "titleZh": "舞台式分镜",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-059.webp",
+      "previewSize": {
+        "width": 545,
+        "height": 688
+      },
+      "previewSha256": "4f0044d4d67af7d272609f2fae61cd577b63512cef81fd4e79923a12c0017fd7",
+      "promptZh": "漫画分镜。排版：舞台式分镜，页面像固定舞台，人物从不同方向进出，空间不变而时间推进。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Fixed Proscenium Stage, single fixed theatrical stage perspective where characters enter and exit while environment remains stationary. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "fixed-stage",
+        "primary-panel",
+        "progression"
+      ],
+      "strengths": [
+        "适合同一空间内的时间和人物变化",
+        "能建立明确的主格和次格层级",
+        "能强化逐级推进的视觉节奏"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-060",
+      "titleZh": "横卷式分镜",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-060.webp",
+      "previewSize": {
+        "width": 555,
+        "height": 688
+      },
+      "previewSha256": "8b05625f83a4bca9d059d11ac98e83ed02ffd4e084fa2a459dfe0947359351fb",
+      "promptZh": "漫画分镜。排版：横卷式分镜，仿长卷或横向连续场景，人物在同一环境中多次出现。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Horizontal Continuous Scroll, emulating traditional horizontal scroll where character appears multiple times across continuous landscape. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "horizontal-flow",
+        "primary-panel"
+      ],
+      "strengths": [
+        "适合横向连续空间或宽景",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-061",
+      "titleZh": "竖卷式分镜",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-061.webp",
+      "previewSize": {
+        "width": 544,
+        "height": 664
+      },
+      "previewSha256": "104a037d62dff982130dae269ae68646bca1e53e1ef653fcbbd8444fcd254403",
+      "promptZh": "漫画分镜。排版：竖卷式分镜，仿纵向长卷，人物和事件沿上下空间持续展开。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Vertical Hanging Scroll, emulating vertical scroll where events and characters descend continuously down single tall space. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "primary-panel",
+        "vertical-flow"
+      ],
+      "strengths": [
+        "能建立明确的主格和次格层级",
+        "适合向上／向下的空间运动"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-062",
+      "titleZh": "镜面反射式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-062.webp",
+      "previewSize": {
+        "width": 555,
+        "height": 664
+      },
+      "previewSha256": "a13f52e3e3457cb1b46e6b80e97f8995d51121a526361e476cfc915ffff096c0",
+      "promptZh": "漫画分镜。排版：镜面反射式，利用左右、上下或真实镜面形成双重画面和心理对照。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Mirror Reflection Dualism, mirror surfaces, puddles, or reflections splitting scene into twin perspectives and psychological duality. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "primary-panel",
+        "reflection"
+      ],
+      "strengths": [
+        "能建立明确的主格和次格层级",
+        "适合真实与倒影、表象与心理的对照"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-063",
+      "titleZh": "窗口式分镜",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-063.webp",
+      "previewSize": {
+        "width": 544,
+        "height": 659
+      },
+      "previewSha256": "52a1d900b9ae1b07261f6d1067017aad3230e00332b2bdf80f7ef2701e1d1225",
+      "promptZh": "漫画分镜。排版：窗口式分镜，以窗户、门框、屏幕等现实结构天然形成画框和面板。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Architectural Window Framing, windows, door frames, balconies, or screens naturally forming visual panels. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "natural-frame",
+        "primary-panel",
+        "screen"
+      ],
+      "strengths": [
+        "能利用场景物件形成天然画框",
+        "能建立明确的主格和次格层级",
+        "能把屏幕媒介纳入页面结构"
+      ],
+      "requirements": [
+        "screen-or-device"
+      ],
+      "risks": [
+        "屏幕内容和实体对白容易争夺阅读顺序"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-064",
+      "titleZh": "物件遮挡式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-064.webp",
+      "previewSize": {
+        "width": 555,
+        "height": 659
+      },
+      "previewSha256": "0c2b020e3a19ed1b453c924d1dde91ab724a3bbee0e11b611105d61b1fed5a2f",
+      "promptZh": "漫画分镜。排版：物件遮挡式，前景物件作为天然分隔线，把页面切成多个叙事区域。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Foreground Silhouette Framing, foreground elements (pillars, tree trunks, door jambs) naturally partitioning scene into narrative panels. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "natural-frame",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能利用场景物件形成天然画框",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-065",
+      "titleZh": "文字主导式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-065.webp",
+      "previewSize": {
+        "width": 545,
+        "height": 649
+      },
+      "previewSha256": "da341db3aaa4661d3e6c3165234bc02032db675d4e8bd5f9125a554b35398bdd",
+      "promptZh": "漫画分镜。排版：文字主导式，巨大标题或音效字本身成为页面骨架，人物与面板围绕文字布局。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Typographic Scaffold Layout, monumental sound-effect characters or titles act as structural skeleton, with panels built around lettering. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "primary-panel",
+        "text-led"
+      ],
+      "strengths": [
+        "能建立明确的主格和次格层级",
+        "能让文字承担主要视觉骨架"
+      ],
+      "requirements": [
+        "typography-as-structure"
+      ],
+      "risks": [
+        "文字量和排字质量会直接决定页面成败"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-066",
+      "titleZh": "音效主导式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-066.webp",
+      "previewSize": {
+        "width": 555,
+        "height": 649
+      },
+      "previewSha256": "9b06dc80c99e7a488786e1c2ea02b81753866d8a37bcb9f6bcf3aeef8f99827b",
+      "promptZh": "漫画分镜。排版：音效主导式，巨大拟声词穿过多个面板，统一动作节奏和视觉方向。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Onomatopoeia Trail, giant sound effect words cutting across panels, uniting kinetic rhythm and visual direction. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "action",
+        "primary-panel",
+        "sound-led"
+      ],
+      "strengths": [
+        "能强化运动方向和速度感",
+        "能建立明确的主格和次格层级",
+        "能让拟声词统一动作节奏"
+      ],
+      "requirements": [
+        "prominent-sound-effect"
+      ],
+      "risks": [
+        "动作轴线、肢体和道具连续性风险较高",
+        "巨大拟声词可能遮挡人物和动作"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "none",
+          "low"
+        ],
+        "recommendedActionContinuity": "medium",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-067",
+      "titleZh": "色块主导式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-067.webp",
+      "previewSize": {
+        "width": 545,
+        "height": 674
+      },
+      "previewSha256": "50afc273aeef0b7eb4831effa5d8a235fd4abd83fdeae1b68b0075679dc8090a",
+      "promptZh": "漫画分镜。排版：色块主导式，不同色块充当面板边界或情绪区域，比传统黑框更设计化。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Color Block Panel Partitions, distinct solid color blocks serving as panel dividers and emotional mood zones rather than black lines. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "color-led",
+        "primary-panel"
+      ],
+      "strengths": [
+        "能用色块划分情绪或叙事区域",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "必须根据当前页面节拍重新确认格数、文字容量和目标尺寸可读性"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "medium"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    },
+    {
+      "templateId": "SB-068",
+      "titleZh": "几何分割式",
+      "templateKind": "reference-recipe",
+      "geometryStatus": "reference-only",
+      "preview": "previews/SB-068.webp",
+      "previewSize": {
+        "width": 555,
+        "height": 674
+      },
+      "previewSha256": "4bd04dada580fc196d04809abaf50580fd8753dc5ea84e89fbb57c59377d5bb6",
+      "promptZh": "漫画分镜。排版：几何分割式，使用圆形、三角形、多边形等非矩形面板构成页面。让该分镜机制决定页面结构、阅读顺序、主次画格和镜头节奏；输出一张完整单页漫画页面，画格共同讲述连续情节，角色外观在各格保持一致。",
+      "promptEn": "Comic storyboard. Layout: Non-Rectangular Geometric Mosaic, circular, triangular, and polygon panels dividing page, creating stylized geometric rhythm. Let this storyboard mechanism determine the page structure, reading flow, panel hierarchy, and pacing; output a complete single-page comic where panels tell a continuous story with consistent characters.",
+      "tags": [
+        "freeform",
+        "geometric",
+        "primary-panel"
+      ],
+      "strengths": [
+        "适合主观、梦境或实验性叙事",
+        "能以非矩形画格建立强设计感",
+        "能建立明确的主格和次格层级"
+      ],
+      "requirements": [],
+      "risks": [
+        "非规则路径容易造成阅读顺序歧义",
+        "非矩形画格的生成稳定性和排字安全区风险较高"
+      ],
+      "capacities": {
+        "panelCountHint": {
+          "exact": null,
+          "min": 1,
+          "max": null
+        },
+        "subjectCapacity": {
+          "status": "derive-from-page",
+          "min": 0,
+          "max": null
+        },
+        "recommendedDialogueDensity": [
+          "low",
+          "medium"
+        ],
+        "recommendedActionContinuity": "low",
+        "readingComplexity": "high"
+      },
+      "constraints": [
+        "仅作为分镜机制与构图参考，不能当作精确面板坐标",
+        "使用前必须结合当前页面节拍实例化生产版几何",
+        "预览中的人物、文字和故事内容不得作为新作品素材复用"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "width": 1200,
+  "height": 1600,
+  "preview": {
+    "width": 300,
+    "height": 400
+  },
+  "font_family": "PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, sans-serif",
+  "signature": {
+    "text": "系列名",
+    "x": 1140,
+    "y": 1560,
+    "size": 15,
+    "anchor": "end",
+    "fill": "#77736d",
+    "stroke": "#fffdf7",
+    "stroke_width": 3
+  },
+  "expected_balloon_count": 2,
+  "expected_framed_text_count": 1,
+  "pages": [
+    {
+      "number": "01",
+      "source": "raw/page-01-art.png",
+      "balloons": [
+        {
+          "id": "P1-B1",
+          "bubble": [70, 45, 430, 190],
+          "shape": "ellipse",
+          "box": [105, 78, 360, 120],
+          "lines": ["一句短对白", "最多三行"],
+          "max_size": 38,
+          "min_size": 28,
+          "min_clearance": 12,
+          "weight": 700
+        },
+        {
+          "id": "P1-B2",
+          "bubble": [690, 225, 300, 150],
+          "shape": "ellipse",
+          "box": [725, 255, 230, 90],
+          "lines": ["另一个角色回应。"],
+          "max_size": 28,
+          "min_size": 22,
+          "min_clearance": 12,
+          "weight": 600
+        }
+      ],
+      "framed_text": [
+        {
+          "id": "P1-F1",
+          "frame": [625, 990, 170, 50],
+          "box": [637, 1000, 146, 30],
+          "lines": ["道具文字"],
+          "size": 18,
+          "weight": 700,
+          "anchor": "middle",
+          "rotation": -3,
+          "rotation_origin": [710, 1015]
+        }
+      ]
+    }
+  ]
+}

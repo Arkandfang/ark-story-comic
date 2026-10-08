@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/ark-story-comic/storyboard-recipe-catalog.schema.json",
+  "title": "Storyboard Reference Recipe Catalog",
+  "type": "object",
+  "required": ["catalogVersion", "templateKind", "templates"],
+  "properties": {
+    "catalogVersion": {"type": "string"},
+    "templateKind": {"const": "reference-recipe"},
+    "templates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "templateId",
+          "titleZh",
+          "templateKind",
+          "geometryStatus",
+          "preview",
+          "previewSize",
+          "previewSha256",
+          "promptZh",
+          "promptEn",
+          "tags",
+          "strengths",
+          "requirements",
+          "risks",
+          "capacities",
+          "constraints"
+        ],
+        "properties": {
+          "templateId": {"type": "string", "pattern": "^SB-[0-9]{3}$"},
+          "titleZh": {"type": "string", "minLength": 1},
+          "templateKind": {"const": "reference-recipe"},
+          "geometryStatus": {"const": "reference-only"},
+          "preview": {"type": "string", "minLength": 1},
+          "previewSize": {
+            "type": "object",
+            "required": ["width", "height"],
+            "properties": {
+              "width": {"type": "integer", "minimum": 1},
+              "height": {"type": "integer", "minimum": 1}
+            },
+            "additionalProperties": false
+          },
+          "previewSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "promptZh": {"type": "string", "minLength": 1},
+          "promptEn": {"type": "string", "minLength": 1},
+          "tags": {"type": "array", "items": {"type": "string"}},
+          "strengths": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "requirements": {"type": "array", "items": {"type": "string"}},
+          "risks": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "capacities": {
+            "type": "object",
+            "required": [
+              "panelCountHint",
+              "subjectCapacity",
+              "recommendedDialogueDensity",
+              "recommendedActionContinuity",
+              "readingComplexity"
+            ],
+            "properties": {
+              "panelCountHint": {
+                "type": "object",
+                "required": ["exact", "min", "max"],
+                "properties": {
+                  "exact": {"type": ["integer", "null"], "minimum": 1},
+                  "min": {"type": "integer", "minimum": 1},
+                  "max": {"type": ["integer", "null"], "minimum": 1}
+                },
+                "additionalProperties": false
+              },
+              "subjectCapacity": {
+                "type": "object",
+                "required": ["status", "min", "max"],
+                "properties": {
+                  "status": {"const": "derive-from-page"},
+                  "min": {"type": "integer", "minimum": 0},
+                  "max": {"type": ["integer", "null"], "minimum": 0}
+                },
+                "additionalProperties": false
+              },
+              "recommendedDialogueDensity": {
+                "type": "array",
+                "minItems": 1,
+                "items": {"enum": ["none", "low", "medium", "high"]}
+              },
+              "recommendedActionContinuity": {
+                "enum": ["low", "medium", "high"]
+              },
+              "readingComplexity": {"enum": ["low", "medium", "high"]}
+            },
+            "additionalProperties": false
+          },
+          "constraints": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
